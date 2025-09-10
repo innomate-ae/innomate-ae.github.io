@@ -9,6 +9,7 @@ body {
   align-items: center;
   height: 100vh;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .container {
@@ -44,6 +45,7 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap; /* Ensures wrap on smaller screens */
 }
 
 .socials a {
@@ -63,4 +65,32 @@ h1 {
 
 .socials a:hover {
   background-color: #4338ca; /* darker indigo */
+}
+
+/* ✅ Mobile Responsiveness */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  .subtext {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    width: 100px;
+    margin-bottom: 30px;
+  }
+
+  .socials {
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .socials a {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    padding: 10px;
+  }
 }
