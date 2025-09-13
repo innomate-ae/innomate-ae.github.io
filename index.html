@@ -1,32 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Innomate - Maintenance</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-aFZzFq8cRl0R9dylvKgoHyGnS7s3LODbtY4qDCzA+OaYi9Zzt+gHrhItjTZwD8W3r4nhL9JK1HX4PaI4zflJKQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abu Dhabi Engineering & Construction</title>
+  <meta name="description" content="Abu Dhabi Engineering & Construction — civil, MEP and infrastructure solutions in Abu Dhabi and the UAE." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero-bg{background-image: linear-gradient(90deg, rgba(2,6,23,0.7), rgba(2,6,23,0.4)), url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1600&q=60'); background-size: cover; background-position: center;}
+    .floating-card{backdrop-filter: blur(6px);}
+    .gradient-text{background: linear-gradient(to right, #4f46e5, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+  </style>
 </head>
-<body>
-  <div class="container">
-    <img src="icons/logo.svg" alt="innomate Logo" class="logo" />
-    <h1>We're sorry! The site is under maintenance right now.</h1>
-    <p class="subtext">
-      Our website is currently down for scheduled maintenance. We'll return shortly. We appreciate your patience. <br />
-      Contact us for further information. <br />
-      <a href="mailto:mail@pagedone.com">info@innomate.ae</a>
-    </p>
+<body class="antialiased text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-white/90 backdrop-blur sticky top-0 z-40 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+    <img src="icons/logo.svg" alt="Innomate Engineering Logo"  class="h-12 w-auto rounded-lg shadow-md">
+    <div>
+      <h1 class="text-lg font-bold tracking-wide">Innomate Engineering and Contracting LLC</h1>
+      <p class="text-xs text-gray-500">Construction • Infrastructure • MEP</p>
+    </div>
+      </a>
+      <nav class="hidden md:flex gap-8 items-center text-sm font-medium">
+        <a href="#services" class="hover:text-indigo-600 transition">Services</a>
+        <a href="#projects" class="hover:text-indigo-600 transition">Projects</a>
+        <a href="#about" class="hover:text-indigo-600 transition">About</a>
+        <a href="#team" class="hover:text-indigo-600 transition">Team</a>
+        <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-lg shadow hover:scale-105 transition">Contact</a>
+      </nav>
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-md border">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero-bg min-h-[80vh] flex items-center relative">
+      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="text-white">
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight gradient-text">Building Abu Dhabi's Future</h2>
+            <p class="mt-6 text-lg max-w-xl text-gray-200">A young and ambitious company delivering safe, efficient and sustainable engineering solutions in Abu Dhabi and beyond.</p>
+            <div class="mt-10 flex gap-5">
+              <a href="#contact" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:bg-indigo-700 transition">Get a Quote</a>
+              <a href="#projects" class="inline-block bg-white text-indigo-700 px-6 py-3 rounded-lg font-medium border hover:shadow-lg transition">View Projects</a>
+            </div>
+          </div>
+          <div>
+            <div class="floating-card bg-white/10 rounded-2xl p-6 shadow-lg text-white border border-white/20">
+              <h3 class="font-semibold text-lg">Why Choose Us?</h3>
+              <ul class="mt-4 space-y-3 text-sm">
+                <li>✔ Modern, client-focused approach</li>
+                <li>✔ Experienced engineers & project managers</li>
+                <li>✔ Quality and safety above all</li>
+                <li>✔ Commitment to sustainability</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold gradient-text">Our Services</h3>
+        <p class="text-gray-600 mt-3 max-w-2xl mx-auto">We provide end-to-end services tailored for startups, developers, and businesses looking for cost-effective and high-quality engineering solutions.</p>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="p-8 bg-white rounded-xl shadow hover:scale-105 transition">
+            <h4 class="font-semibold text-lg">Civil Works</h4>
+            <p class="mt-2 text-sm text-gray-600">From foundations to finishes, we handle all aspects of building construction.</p>
+          </div>
+          <div class="p-8 bg-white rounded-xl shadow hover:scale-105 transition">
+            <h4 class="font-semibold text-lg">MEP Solutions</h4>
+            <p class="mt-2 text-sm text-gray-600">Electrical, plumbing, HVAC and fire systems delivered to the highest standards.</p>
+          </div>
+          <div class="p-8 bg-white rounded-xl shadow hover:scale-105 transition">
+            <h4 class="font-semibold text-lg">Project Management</h4>
+            <p class="mt-2 text-sm text-gray-600">Effective planning and execution ensuring timely, safe and quality outcomes.</p>
+          </div>
+          <div class="p-8 bg-white rounded-xl shadow hover:scale-105 transition">
+            <h4 class="font-semibold text-lg">Consultancy</h4>
+            <p class="mt-2 text-sm text-gray-600">Design, approvals and consultancy tailored to Abu Dhabi’s market requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-20">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold gradient-text">Our Work</h3>
+        <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Though we are a young company, we’ve partnered on exciting developments that showcase our commitment to quality and innovation.</p>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl shadow overflow-hidden hover:scale-[1.02] transition">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=60" alt="Project" class="w-full h-48 object-cover">
+            <div class="p-5">
+              <h4 class="font-semibold">Residential Villas</h4>
+              <p class="text-sm text-gray-600 mt-2">Complete civil & MEP execution with a modern design.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow overflow-hidden hover:scale-[1.02] transition">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=1200&q=60" alt="Project" class="w-full h-48 object-cover">
+            <div class="p-5">
+              <h4 class="font-semibold">Commercial Fit-Out</h4>
+              <p class="text-sm text-gray-600 mt-2">Interior works for offices and retail units in Abu Dhabi.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow overflow-hidden hover:scale-[1.02] transition">
+            <img src="https://images.unsplash.com/photo-1499696010182-7bdfdbe3b2b3?auto=format&fit=crop&w=1200&q=60" alt="Project" class="w-full h-48 object-cover">
+            <div class="p-5">
+              <h4 class="font-semibold">Infrastructure Works</h4>
+              <p class="text-sm text-gray-600 mt-2">Utility lines, road works and landscaping for new developments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold gradient-text">About Us</h3>
+        <p class="mt-4 text-gray-600 max-w-3xl mx-auto">We are a newly established engineering and construction company based in Abu Dhabi. Our mission is to bring fresh ideas, strong technical expertise, and client-focused services to the UAE construction sector.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+<!-- Contact -->
+<section id="contact" class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6 lg:px-20">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Contact Us</h2>
     
-    <!-- <div class="socials">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-x-twitter"></i></a>
-      <a href="#"><i class="fab fa-dribbble"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-telegram-plane"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-    </div> -->
+    <div class="grid md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+      
+      <!-- Contact Form Card -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+          <!-- Web3Forms Hidden Fields -->
+          <input type="hidden" name="access_key" value="52fcbe3e-2cfd-43ee-a137-05950b617479">
+          <input type="hidden" name="from_name" value="Innomate Engineering & Contracting Website">
+          <input type="hidden" name="subject" value="New Inquiry from Website">
+          <input type="hidden" name="redirect" value="https://innomate.ae/thank-you.html">
+          <input type="hidden" name="replyto" value="info@innomate.ae">
+
+          <div>
+            <label for="name" class="block text-gray-700 font-medium">Your Name</label>
+            <input type="text" name="name" id="name" required 
+              class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+
+          <div>
+            <label for="email" class="block text-gray-700 font-medium">Email Address</label>
+            <input type="email" name="email" id="email" required 
+              class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+
+          <div>
+            <label for="message" class="block text-gray-700 font-medium">Message</label>
+            <textarea name="message" id="message" rows="5" required
+              class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+          </div>
+
+          <button type="submit" 
+            class="w-full bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Info Card -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col justify-between">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Contact Info</h3>
+
+        <div class="space-y-6 text-gray-700">
+          <!-- Address -->
+          <div class="flex items-start gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4m10 0h-2m-4 0H7m12 4v6a2 2 0 01-2 2H7a2 2 0 01-2-2v-6m14 0H5"/>
+            </svg>
+            <div>
+              <h4 class="font-semibold">Address</h4>
+              <p>86CR13, Industrial City-ICAD 2, Musaffah, UAE</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-start gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 0v10a2 2 0 01-2 2H5a2 2 0 01-2-2V8m18 0L12 13 3 8"/>
+            </svg>
+            <div>
+              <h4 class="font-semibold">Email</h4>
+              <p>info@innomate.ae</p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div class="flex items-start gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-600 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10l9-6 9 6v6a9 9 0 11-18 0v-6z"/>
+            </svg>
+            <div>
+              <h4 class="font-semibold">Phone</h4>
+              <p>+971 50 256 1528</p>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="mt-4">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3636.7761542984726!2d54.46259537590892!3d24.284547868059636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e3fdc27cb63a5%3A0xf7fdd2abad1fae9c!2sINNOMATE%20ENGINEERING%20%26%20Contracting%20LLC!5e0!3m2!1sen!2sae!4v1757744540431!5m2!1sen!2sae" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+           </iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+</section>
+
+
+  </main>
+
+  <footer class="bg-gray-900 text-gray-300 py-6">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm">© 2025 Abu Dhabi Engineering & Construction. All rights reserved.</p>
+      <div class="flex gap-5 text-sm">
+        <a href="#" class="hover:text-white transition">Privacy</a>
+        <a href="#" class="hover:text-white transition">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    btn.addEventListener('click', ()=>{
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
